@@ -1,0 +1,461 @@
+
+Javascript run 
+
+1. browser
+2. Node JS
+
+Chrome - v8 Engine
+firefox - Surveymonkey Engine
+
+Rest operator & Spread Operator
+
+pacakge.json & Package.lock.json
+
+Prmoise, Async, fetch, Hoisting, Closure, reduce
+
+Array and Object
+
+state - setState - Async operation -temp store data in component itself
+
+props
+
+forceUpdate // SetState 
+
+Lifecycle
+
+constructor()
+Render()
+
+componentDidMount() - 1 times - after render
+componentDidUpdate() - Every Times - best place to get updated state value
+componentWillUnmount() 
+
+componentWillMount() - Run Once - before render
+componentWillUpdate() - Run Once - before render
+shouldComponentUpdate() -
+componetWillReceiveProps() -
+
+polyfills & prototype
+
+window browser object
+
+map, filter, forEach, for of, fr in, reduce - iterator
+
+keys, values, entries, split, join, assign, create, freeze
+
+Deep copy vs Shallow copy
+
+.create or ...obj
+
+Deep Cloning vs Deep shallow
+
+state -mutable/update/change  vs props immutable/can't change/read only
+
+Class component - Statefull componet vs Functional component - stateless component
+ 
+Functional component - Hooks - Use states
+
+const [count, setCount] = useState(0);
+
+useEffect - update every render
+
+setCount - Aync mode
+
+useEffect(() => {
+console.log("Triggered every time(componentDidMount & componentDidUpdate)");
+})
+
+useEffect(() => {
+console.log("Triggered once time(componentDidMount)");
+},[])
+
+useEffect(() => {
+console.log("Triggered once time(componentDidMount)");
+},[status])
+
+SOAP API - XML
+REST API - JSON
+
+Router
+
+BroserRoute, Routes, Route, Link
+npm install react-router-dom
+npm install bootstrap
+npm install react-bootstrap
+
+useNavigate
+
+npm i nanoid -for dynamic id
+
+https://api.coindesk.com/v1/bpi/currentprice.json
+
+Using SASS
+
+npm i sass
+import './sass/Test.scss';
+@import '.sass/variable.scss';
+npm i font-awesome
+
+TypeScript
+
+npm i -g typescript
+tsc filname.ts
+node filename.js
+tsc --init    > create configuration file
+tsc filename.js --watch
+
+interface, enum, type, union(number | boolean), readonly
+
+Class
+
+Ref - it's not work on life cycle
+createRef
+ref={this.inputRef1} 
+
+Function
+
+useRef
+
+forwardRef
+
+npx create-react-app app --template typescript  --- > from scratch
+npm i --save typescript @types/node @types/react @types/react-dom @types/jest  -> with exisiting project
+
+Charts (D3.js, HighCharts.js, Chart.js, canvas.js)
+
+npm install chart.js
+npm i react-chartjs-2
+npm i canvasjs
+
+Form - Formic (for form validation)
+
+npm i formik
+
+Lift state up (child to parent)
+
+props drilling(parent to child)
+
+React Context (Provider(1 key and value will accept) & Consumer(useContext))
+
+createContext
+useContext
+
+*Any hooks can't be used in Class component
+
+props.children
+
+*Context can be created many in component
+
+*1 provider can be only for 1 context
+
+HOC - Common function would be wrapped in HOC Component
+
+React from scratch (without boiler plate)
+
+mkdir demo
+cd demo 
+npm init
+npm i react
+npm i react-scripts
+nom i react-dom
+
+or 
+
+npm i react react-scripts react-dom
+
+Add browser list in package.json file
+
+"browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+
+Add command "start": "react-scripts start" in script section of package.json file
+
+create public folder and src folder
+
+create index.html
+
+(<div id="root"></div>) file in public folder
+
+create index.js
+
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(<App />,document.getElementById('root'));) file and App.js 
+
+Create App Class or Functional Component file in src folder
+
+Run Command : npm run start
+
+CRUD API Operaion with JSON-SERVER
+
+npm i json-server
+
+Add below command in package.json to start
+
+"Scripts":{
+"start" : "json-server -p 3006 -w db.json"
+}
+npm i axios
+
+useContext() - functional component
+
+Nested routes
+Protected Routes
+
+useParams
+
+useLayoutEffect
+
+Order
+
+1. useLayoutEffect - will run before return jsx run
+2. return jsx
+3. useEffect - will run after return jsx run
+
+useMemo - used for performance or minimize infinite rerender 
+
+useCallback
+
+useImperativeHandle - used when some var needs to be used in Parent component from child
+
+useNavigate - redirect component
+
+useLocation
+
+LazyLoading - lazy from 'react'
+
+Lazyload import can't be imported before normal import should be in bottom
+
+Context - for small Application
+
+*Redux - for Large Application
+
+useReducer
+
+1. dispatch - action - carrier method
+2. reducer - intelligent logic
+
+i.state 
+ii. action/dispatch
+a.type 
+b.payload
+
+redux - store/state management - single source of truth
+
+reducer
+action/dispatch/dispatcher - type and payload
+selector
+store/state
+
+react-redux - 
+
+Redux App frm scratch
+
+npm i react-router-dom
+npm i react-bootstrap
+npm i redux
+npm i react-redux
+npm i bootstrap
+npm i axios
+npm i redux-saga
+
+combineReducers
+createStore
+useSelector
+useDipatch
+useReducer
+
+Middleware
+
+npm i redux-saga
+applyMiddlware
+
+MapStatetoProps
+
+Redux
+Actions, Reducer, Store
+
+
+React Redux
+Provider, useSelector, useDispatch
+connect - mapStateToprops, mapDispatchToProps
+middleware - api handling
+
+
+Redux Toolkit
+store - configurestore  | store - createstore
+import { configureStore } from '@reduxjs/toolkit'
+create slices and then combine in index.js | separate reducers and then combinereducer 
+
+const slice1 = createSlice({
+    name: 'slice1',
+    initialStateCart = [],
+    reducers : {
+        list of functions
+    }
+})
+
+Generator function
+
+Redux Dev Tool Extension
+https://fakestoreapi.com/
+https://fakestoreapi.com/products
+
+action > constant > reducers/> Combine > selector > store
+
+Middleware
+Redux-Saga
+Redux-Thunk
+
+NODE Express API
+
+unlink - delete file
+fs.unlink
+fs.rmdir
+fs.readdir
+fs.mkdir
+fs.readFile
+fs.writeFile
+
+Express
+
+npm i express
+npm i nodemon
+npm i colors 
+
+app.use - middleware
+
+for of use for - array
+for in use for - object 
+
+npm i body-parser    ---- used for convert in json format
+
+Assignment Weather API
+
+https://rapidapi.com/community/api/open-weather-map
+
+Practice Pending List
+
+Json Sever---------------------------------------------------Done
+Assignment Weather API---------------------------------------Done
+Protected Route----------------------------------------------Done
+
+<Route path='/accounts' element = {
+       <ProtectedRoute>
+        <Accounts/>
+       </ProtectedRoute>
+  }/>
+
+Nested Route-------------------------------------------------Done
+
+<Route path='apps'>
+  <Route path='app1' element = {<ToDo/>}/>
+  <Route path='app2' element = {<EMI/>}/>
+ </Route>
+
+Layout Effect------------------------------------------------
+
+useMemo------------------------------------------------------
+useCallback--------------------------------------------------
+useImperativeHandle------------------------------------------
+Lazy/Code Spliting in react----------------------------------Done
+
+*it should always below all import
+
+import React, { lazy, Suspense} from 'react';
+
+const Footer = lazy(() => import('./common/Footer'));
+
+<Suspense fallback={<div>---Footer---</div>}>
+            <Footer/>
+          </Suspense>
+
+React Redux -------------------------------------------------In progress
+Assignment Wishlist/order feature  add in Ecom app-----------In progress
+Ball movement app game type practice-------------------------Done
+Node basic practice------------------------------------------Done
+ToDo App Assignment with React Redux-------------------------
+
+On going Class
+
+Node Express basic practice----------------------------------In progress
+
+npm i ejs
+npm i cors
+
+npm i body-parser
+npm i mongoose
+
+download mongoosue premises setup
+
+async vs await
+
+body - query - id
+
+cluster > project > database > table 
+
+or
+
+  <Route path='/hooklayouteffect' element = {<HookLayoutEffect/>}/>
+  <Route path='/hookmemo' element = {<HookMemo/>}/>
+  <Route path='/colorapp' element = {<ColorApp/>}/>
+  <Route path='/hookhandle' element = {<HookHandle/>}/>
+  <Route path='/hookcallback' element = {<HookCallback/>}/>
+
+Training Git Hub Repo
+
+https://github.com/deepak104080/cetpa_react - React Lazy 
+https://github.com/deepak104080/json_server_cetpa - JSON Server Demo - Done
+https://github.com/deepak104080/cetpa_js - React with TypeScript - Done
+https://github.com/deepak104080/react_npm_cetpa - Theme Switcher Assignment
+https://github.com/deepak104080/redux_app_cetpa_test - React Redux Aap Demo 
+https://github.com/deepak104080/node_cetpa_basics - Node Basics
+
+https://github.com/deepak104080/express_cetpa_ecommerce - Express Middleware
+
+Git Repo Link
+
+https://github.com/ervkgithub/practices_react_training_cepta
+https://github.com/ervkgithub/practices_react_training_cepta/tree/master
+
+Setting up a new Git Repo
+
+git init
+git add . or any specific file name
+git status
+git commit -m "first commit"
+git remote add origin https://github.com/ervkgithub/practices_react_training_cepta
+git push origin master
+
+https://github.com/ervkgithub/todo_app_redux.git
+
+7365054112 - NK Singh Maharastra
+9771262814 - Sikendra Singh Baltara - done
+7004783104 - Dr. PC Kumar Saharsha
+8051151518 - Anil Kumar Singh Sekhpura
+9934258514 - Uday Mamu - Begusarai Bishanpur - done
+
+9376125987 - Amresh singh soynbarsa - Ahmedabad
+9570499295 - Neelam - Danapur
+9771262814 - Kiran - Baltara - done
+8051298573 - Rinku - Sekhpura Begusarai
+9534678589 - Rita Mausi
+
+JWT
+
+Format - header
+What Data neeed to passed - payload
+Signature - signature
+npm i jsonwebtoken
+
+
